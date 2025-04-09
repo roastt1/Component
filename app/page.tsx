@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Button variant="primary" size="sm" onClick={handleClick}>기본</Button>
-      <Button variant="save" size="md">저장하기</Button>
+      <Button variant="save" size="md" fullWidth>저장하기</Button>
       <Button variant="cancel" size="lg">취소하기</Button>
       <Button variant="primary" size="sm">기본</Button>
       <Button variant="save" size="md">저장하기</Button>

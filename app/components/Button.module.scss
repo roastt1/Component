@@ -2,7 +2,6 @@
 $main-color: #007bff;
 $accent-color: #003FAD;
 $secondary-color: #E6F0FF;
-
 .button {
     margin: 2px;
     border: none;
@@ -42,7 +41,7 @@ $secondary-color: #E6F0FF;
 }
 
 .cancel {
-    background-color: #ffffff;
+    background-color: white;
     color: $main-color;
     border: $main-color 1px solid;
 
@@ -65,4 +64,8 @@ $secondary-color: #E6F0FF;
 .button_lg {
     padding: 15px 30px;
     font-size: 20px;
+}
+
+.fullWidth {
+    width: 100%;
 }
