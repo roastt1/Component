@@ -41,7 +41,7 @@ $secondary-color: #E6F0FF;
     }
 }
 
-.cancle {
+.cancel {
     background-color: #ffffff;
     color: $main-color;
     border: $main-color 1px solid;
@@ -52,17 +52,17 @@ $secondary-color: #E6F0FF;
     }
 }
 
-.small {
+.button_sm {
     padding: 5px 10px;
     font-size: 12px;
 }
 
-.medium {
+.button_md {
     padding: 10px 20px;
     font-size: 15px;
 }
 
-.large {
+.button_lg {
     padding: 15px 30px;
     font-size: 20px;
 }
