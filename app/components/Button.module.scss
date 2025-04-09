@@ -1,0 +1,68 @@
+// 색상 변수 정의
+$main-color: #007bff;
+$accent-color: #003FAD;
+$secondary-color: #E6F0FF;
+
+.button {
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.primary {
+    background-color: rgb(122, 122, 122);
+    color: rgb(255, 255, 255);
+
+    &:hover {
+        background-color: rgb(77, 77, 77);
+    }
+}
+
+.save {
+    background-color: $main-color;
+    color: white;
+
+    &:hover {
+        background-color: $accent-color;
+    }
+}
+
+.cancle {
+    background-color: #ffffff;
+    color: $main-color;
+    border: $main-color 1px solid;
+
+    &:hover {
+        background-color: $main-color;
+        color: white;
+    }
+}
+
+.small {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.medium {
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.large {
+    padding: 15px 30px;
+    font-size: 20px;
+}
