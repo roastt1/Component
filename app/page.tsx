@@ -2,6 +2,7 @@
 import Button from "./components/Button/Button";
 import Card from "./components/Card/Card";
 import styles from "./components/Card/Card.module.scss";
+import CountStoreComponent from "./zustand/zustand";
 
 export default function Home() {
   const handleClick = () => {
@@ -59,6 +60,7 @@ export default function Home() {
           }
         ></Card>
       </div>
+      <CountStoreComponent />
     </>
   );
 }
