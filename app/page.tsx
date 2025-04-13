@@ -1,15 +1,16 @@
 "use client";
 import Button from "./components/Button/Button";
 import Card from "./components/Card/Card";
-import styles from "./page.module.css";
+import styles from "./components/Card/Card.module.scss";
 
 export default function Home() {
   const handleClick = () => {
     alert("버튼 클릭됨");
+    console.log(styles);
   };
   return (
     <>
-      <div className={styles.page}>
+      <div>
         <Button variant="primary" size="sm" onClick={handleClick} fullWidth>
           기본
         </Button>
@@ -29,99 +30,34 @@ export default function Home() {
           취소하기
         </Button>
       </div>
+      
       <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
         <Card
-          type="project"
-          title="나랑 레전드 프로젝트 할사람!!!"
-          category="프로젝트"
-          deadline="2025.04.17"
-          likeCount={30}
-          userId="박준선"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food0.png"
-        />
-
-        <Card
-          type="profile"
-          title="이 프로필 레전드임.. 진짜 대박.."
-          category="프로필"
-          likeCount={15}
-          userId="멋쟁이사자처럼"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food2.png"
-        />
-
-<Card
-          type="project"
-          title="나랑 레전드 프로젝트할사람!!!나랑 레전드 프로젝트할사람!!!나랑 레전드 프로젝트할사람!!!나랑 레전드 프로젝트할사람!!!"
-          category="프로젝트"
-          deadline="2025.04.17"
-          likeCount={30}
-          userId="박준선"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food0.png"
-        />
-
-        <Card
-          type="profile"
-          title="이 프로필 레전드임.. 진짜 대박.. 박"
-          category="프로필"
-          likeCount={15}
-          userId="멋쟁이사자처럼"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food2.png"
-        />
-
-<Card
-          type="project"
-          title="나랑 레전드 프로젝트!"
-          category="프로젝트"
-          deadline="2025.04.17"
-          likeCount={30}
-          userId="박준선"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food0.png"
-        />
-
-        <Card
-          type="profile"
-          title="이 프로필 레전드임.. 진짜 대박.. "
-          category="프로필"
-          likeCount={15}
-          userId="멋쟁이사자처럼"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food2.png"
-        />
-        <Card
-          type="project"
-          title="나랑 레전드 프로젝트 할사람!!!나랑 레전드 프로젝트 할사람!!!"
-          category="프로젝트"
-          deadline="2025.04.17"
-          likeCount={30}
-          userId="박준선"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food0.png"
-        />
-
-        <Card
-          type="profile"
-          title="이 프로필 레전드임.. 진짜 대박.. 대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박대박"
-          category="프로필"
-          likeCount={15}
-          userId="멋쟁이사자처럼"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food2.png"
-        />
-        <Card
-          type="project"
-          title="나랑 레전드 프로젝트 할사람!!!나랑 레전드 프로젝트 할사람!!!나랑 레전드 프로젝트 할사람!!!나랑 레전드 프로젝트 할사람!!!나랑 레전드 프로젝트 할사람!!!나랑 레전드 프로젝트 할사람!!!나랑 레전드 프로젝트 할사람!!!나랑 레전드 프로젝트 할사람!!!"
-          category="프로젝트"
-          deadline="2025.04.17"
-          likeCount={30}
-          userId="박준선"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food0.png"
-        />
-
-        <Card
-          type="profile"
-          title="이 프로필 레전드임"
-          category="프로필"
-          likeCount={15}
-          userId="멋쟁이사자처럼"
-          profileImage="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food2.png"
-        />
+          header={
+            <span className={`${styles.category} ${styles["프로젝트"]}`}>
+              프로젝트
+            </span>
+          }
+          body={
+            <>
+              <div className={styles.deadline}>마감일 | 2025.04.17</div>
+              <div className={styles.title}>나랑 프로젝트 할 사람!</div>
+            </>
+          }
+          footer={
+            <div className={styles.userInfo}>
+              <div className={styles.profileImageContainer}>
+                <img
+                  src="https://codingapple-cdn.b-cdn.net/wp-content/uploads/2023/01/food2.png"
+                  alt="프로필 이미지"
+                  className={styles.profileImage}
+                />
+              </div>
+              <span>박준선</span>
+              <span>❤️ 좋아요 30</span>
+            </div>
+          }
+        ></Card>
       </div>
     </>
   );
