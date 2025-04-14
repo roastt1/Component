@@ -6,7 +6,7 @@ type CardProps = {
   body?: ReactNode; // 본문 커스터마이징
   footer?: ReactNode; // 하단 커스터마이징
 };
-
+//.
 const Card: FC<CardProps> = ({ header, body, footer, ...props }) => {
   return (
     <div className={styles.card} {...props}>
