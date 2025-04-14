@@ -31,7 +31,7 @@ export default function Home() {
           취소하기
         </Button>
       </div>
-      
+
       <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
         <Card
           header={
