@@ -1,0 +1,35 @@
+.google {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    color: #444;
+    width: 190px;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  
+    .icon {
+      background: url('/g-normal.png') no-repeat center center;
+      background-size: 18px 18px;
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+    }
+  
+    .buttonText {
+      flex-grow: 1;
+      text-align: center;
+      line-height: 42px;
+    }
+  }
+  
